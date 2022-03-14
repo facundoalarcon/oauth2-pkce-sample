@@ -2,7 +2,7 @@
 
 This sample demonstrates how to add authentication to a Go web app using Auth0 with OAuth 2.0 PKCE flow.
 
-Based on [Auth0 Go Quickstart](https://auth0.com/docs/quickstart/webapp/golang), read it to better understand this sample.
+Based on [Auth0 Go Example](https://github.com/auth0-samples/auth0-golang-web-app/tree/master/01-Login), read it to better understand this sample.
 
 ## Motivations
 
@@ -23,6 +23,12 @@ this secret is called the Code Verifier. Additionally, the calling app creates a
 sends this value over HTTPS to retrieve an Authorization Code. 
 This way, a malicious attacker can only intercept the Authorization Code, and they cannot exchange it for a token without the Code Verifier.
 
+## Auth0 App configuration
+Follow [Auth0 Go Quickstart](https://auth0.com/docs/quickstart/webapp/golang) stepts and additionally configure in 
+`Application Properties section` the `Token Endpoint Authentication Method` value with `None`.
+
+[[https://github.com/facundoalarcon/oauth2-pkce-sample/blob/main/doc/resources/auth0_app_properties.jpg]]
+
 ## Running the App
 
 To run the app, make sure you have **go** installed.
@@ -34,7 +40,6 @@ Rename the `.env.example` file to `.env` and provide your Auth0 credentials.
 
 AUTH0_CLIENT_ID={CLIENT_ID}
 AUTH0_DOMAIN={DOMAIN}
-AUTH0_CLIENT_SECRET={CLIENT_SECRET}
 AUTH0_CALLBACK_URL=http://localhost:3000/callback
 ```
 
