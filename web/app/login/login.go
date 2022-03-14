@@ -26,14 +26,14 @@ func Handler(auth *authenticator.Authenticator) gin.HandlerFunc {
 			return
 		}
 
-		strCodeVerif := codeVerifier.String()
+		strCodeVerifier := codeVerifier.String()
 
 		// Create code_challenge with S256 method
 		codeChallenge := codeVerifier.CodeChallengeS256()
 
 		session := sessions.Default(ctx)
 		session.Set("state", state)
-		session.Set("code_verifier", strCodeVerif)
+		session.Set("code_verifier", strCodeVerifier)
 
 		// save session values
 		if err := session.Save(); err != nil {
