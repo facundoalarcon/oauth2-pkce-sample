@@ -16,7 +16,7 @@ When public clients (e.g., native and single-page applications) request Access T
 some additional security concerns are posed that are not mitigated by the Authorization Code Flow alone. 
 When cannot securely store a Client Secret you can use Given these situations, OAuth 2.0 provides a version of 
 the Authorization Code Flow which makes use of a 
-[Proof Key for Code Exchange (PKCE)](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce)
+[Proof Key for Code Exchange (PKCE)](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow-with-proof-key-for-code-exchange-pkce).
 
 The PKCE-enhanced Authorization Code Flow introduces a secret created by the calling application that can be verified by the authorization server; 
 this secret is called the Code Verifier. Additionally, the calling app creates a transform value of the Code Verifier called the Code Challenge and 
