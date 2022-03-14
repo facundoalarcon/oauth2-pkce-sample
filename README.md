@@ -25,7 +25,7 @@ This way, a malicious attacker can only intercept the Authorization Code, and th
 
 ## Auth0 App configuration
 Follow [Auth0 Go Quickstart](https://auth0.com/docs/quickstart/webapp/golang) stepts and additionally configure in 
-`Application Properties section` the `Token Endpoint Authentication Method` value with `None`.
+`Application Properties` section the `Token Endpoint Authentication Method` value with `None`.
 
 ![auth0_app_properties](https://github.com/facundoalarcon/oauth2-pkce-sample/blob/main/doc/resources/auth0_app_properties.jpg)
 
