@@ -47,5 +47,11 @@ Once you've set your Auth0 credentials in the `.env` file, run `go mod vendor` t
 
 Run `go run main.go` to start the app and navigate to [http://localhost:3000/](http://localhost:3000/).
 
+Alternatively, you could build the docker image and run it.
+```
+docker build -t auth0-golang-web-app .
+docker run --env-file .env -p 3000:3000 -it auth0-golang-web-app
+```
+
 ## Related resources
 - [Add Login Using the Authorization Code Flow with PKCE](https://auth0.com/docs/get-started/authentication-and-authorization-flow/add-login-using-the-authorization-code-flow-with-pkce)
